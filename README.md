@@ -108,5 +108,60 @@ the result will be:
 
  My todos: (3) ["item 2", "item 3", "item 4"]
  
+<<<<<<< HEAD
  
 
+=======
+ --------------------------------------------------
+ - Objects
+{
+operatingSystem mac     // these lines are called properties 
+screenSize 15 inches 
+purchaseYear 2014
+}
+
+Surround objects with curly braces 
+must have properties with name and values
+group data that describes something
+
+you can call a property by using the var name (.) and the name of property, the value will be returned
+
+- Requirements for Objects
+- It should store the todos array on an object 
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item3'],
+};
+
+
+- It should have a displayTodos method
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item3'],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  }
+};
+
+
+- It should have a addTodo method
+
+addTodo: funciton(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  }
+};
+
+
+- It should have a changeTodo method
+
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  }
+};
+
+
+
+- It should have a deleteTodo method
+>>>>>>> version3.0
