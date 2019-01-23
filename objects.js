@@ -15,21 +15,6 @@ function addTodo(todo) { //addTodo('new Todo') << this value will be pushed to a
    displayTodos();
  }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // var myComputer = {
 //   operatingSystem: 'mac',     // these lines are called properties followed by a value
 //   screenSize: '15 inches', 
