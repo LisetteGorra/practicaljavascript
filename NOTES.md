@@ -46,7 +46,7 @@ console.log(testArray[i]);            //this code makes the condition more dynam
  
  .displayTodos should tell you if .todos is empty 
  
- breaking down the for lood
+ breaking down the for loop
  
  //if this.todos.length is tripple === equal to 0 
  
@@ -78,4 +78,9 @@ if (condition) {
  
  
  // print with ()
+ 
+ now this will show if the things in the array are completed 
+ items in array can be completed and undone by running code again 
+ 
+ 
  
