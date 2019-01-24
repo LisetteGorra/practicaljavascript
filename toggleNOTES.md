@@ -25,7 +25,6 @@ toggleAll: function (){
      }
      this.displayTodos();
    }
- };
  }
 
 

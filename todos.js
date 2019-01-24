@@ -3,22 +3,25 @@ var todoList = {
   displayTodos: function() {
     console.log('My Todos', this.todos);
     if (this.todos.length === 0) {
-    console.log('Your todo list is emoty!');
-  } else {
+    console.log('Your todo list is empty!');
+  }
+  else {
    console.log('My Todos:');
-   for (var i = 0; i < this.todoslength; i++) {
+   for (i = 0; i < this.todos.length; i++) {
+     
      if(this.todos[i].completed === true) {
        console.log('(x)', this.todos[i].todoText);
-        } else {
+        } 
+        else {
        console.log('()', this.todos[i].todoText);
         }
       }
     }
   },
- addTodo: funciton(todoText) { 
+ addTodo: function(todoText) { 
     this.todos.push({
-      todoText: todoText.
-      complete: false
+      todoText: todoText,
+      complete: false 
     });
     this.displayTodos();
   },
@@ -49,18 +52,37 @@ var todoList = {
   //Case 1: If everything's true, make everything false 
  if (completedTodos === totalTodos){
     //Make everythign false. 
-    for (var i = 0; i <totalTodos; i++) {
+    for (i = 0; i <totalTodos; i++) {
       this.todos[i].completed = false;
        }
        //case 2: Otherwise, make everything true
      } else {
-       for (var i = 0; i <totalTodos; i++) {
+       for (i = 0; i <totalTodos; i++) {
          this.todos[i].completed = true;
        }
      }
      this.displayTodos();
    }
  };
+
+ var displayTodosButton = document.getElementById('displayTodosButton');
+ var toggleAllButton = document.getElementById('toggleAllButton');
+ displayTodosButton.addEventListener('click', function(){
+   todoList.displayTodos();
+ });
+  
+toggleAllButton.addEventListener('click', function(){
+  todoList.toggleAll();
+});
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
