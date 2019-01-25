@@ -1,7 +1,6 @@
 var todoList = {
   todos: [],
   displayTodos: function() {
-    console.log('My Todos', this.todos);
     if (this.todos.length === 0) {
     console.log('Your todo list is empty!');
   }
@@ -65,51 +64,44 @@ var todoList = {
    }
  };
 
- var displayTodosButton = document.getElementById('displayTodosButton');
- var toggleAllButton = document.getElementById('toggleAllButton');
- displayTodosButton.addEventListener('click', function(){
-   todoList.displayTodos();
- });
-  
-toggleAllButton.addEventListener('click', function(){
-  todoList.toggleAll();
-});
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
-// var todos = ['item 1', 'item 2', 'item 3'];
-
-// //It should have a function to display todos
-// function displayTodos() {
-//   console.log('My todos:', todos);
-//  }
-
-// //It should have a function to add todos
-//  function addTodo(todo) { //addTodo('new Todo') << this value will be pushed to array
-//   todos.push(todo);
-//   displayTodos(); // this will allow you to see change imediately 
-//  }
+ var handlers = {
+    displayTodos: function() {
+    todoList.displayTodos();
+  },
+  addTodo: function(){
+    var addTodoTextInput = document.getElementById('addTodoTextInput');
+    todoList.addTodo(addTodoTextInput.value);
+    addTodoTextInput.value ='';
+  },
+  changeTodo: function(){
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    changeTodoPositionInput.value = '';
+    changeTodoTextInput.value = '';
+    
+  },
+  deleteTodo: function(){
+    var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+    todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+    deleteTodoPositionInput.value ='';
+  },
+  toggleCompleted: function(){
+  var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+  todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+  toggleCompletedPositionInput.value = '';
+  },
+   toggleAll:function(){
+    todoList.toggleAll();
+  }
+};
  
-//  //It should have a function to change todos
-// function changeTodo(position, newValue){
-//   todos[position] = newValue;
-//   displayTodos();
-//  }
  
-//  //It should have a function to delete todos
-//  function deleteTodo(position) {
-//   todos.splice(position, 1);
-//   displayTodos();
-//  }
+ 
+ 
+ 
+ 
+ 
  
  
