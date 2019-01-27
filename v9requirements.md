@@ -117,6 +117,38 @@ add something, then to display in console type view.displayTodos();
 
 
 ---------------------------------------------------
-inserting a li element in a ul 
 
-      
+ESCAPING THE CONSOLE
+
+add view.displayTodos(); 
+
+at the end of every function under hadlers var except the display function becasue that will be removed
+
+now you can open html and delete display todos button
+      <button onclick="handlers.displayTodos()">Display Todos</button>
+then delete display todos in handler var (script)
+  displayTodos: function(){
+    todoList.displayTodos();
+  },
+  
+  then delete   this.displayTodos(); under toggle functions and todo functions
+  
+  finally delete code for display todos function 
+  
+   displayTodos: function() {
+    if (this.todos.length === 0) {
+    console.log('Your todo list is empty!');
+  }
+  else {
+   console.log('My Todos:');
+   for (i = 0; i < this.todos.length; i++) {
+     
+     if(this.todos[i].completed === true) {
+       console.log('(x)', this.todos[i].todoText);
+        } 
+        else {
+       console.log('()', this.todos[i].todoText);
+        }
+      }
+    }
+  },
