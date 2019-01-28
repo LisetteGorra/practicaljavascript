@@ -136,7 +136,7 @@ then delete display todos in handler var (script)
   finally delete code for display todos function 
   
    displayTodos: function() {
-    if (this.todos.length === 0) {
+    if (this.todos.length === 0) 
     console.log('Your todo list is empty!');
   }
   else {
